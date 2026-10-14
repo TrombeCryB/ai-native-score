@@ -2,7 +2,7 @@
 
 供你的agent直接使用的本地AI协作评价skill。授权选择Codex/Hermes等实例、日期与项目，收集去敏行为证据，输出丰富中文评价、六维雷达、覆盖度、反例和可执行建议。工具数量不加分。
 
-**当前状态：本地评价可用；公共评分后端尚未部署，没有默认上传地址。** 聚合上传只有在站点上线且用户明确确认准确字段与目标后启用。公开仓库只包含skill、收集器、评估器、发布客户端、必要脚本/测试、文档与合成fixture；网站/服务端/部署项目独立私有维护。
+**本地评价与可选聚合发布已可用。** 默认网站：[AI Native Score](https://ai-native-score.laolv-wenxiang.workers.dev)。先生成本地深度报告，用户明确确认准确聚合字段、昵称与目标后才上传。公开仓库只包含skill、收集器、评估器、发布客户端、必要脚本/测试、文档与合成fixture；网站/服务端/部署项目独立私有维护。
 
 ## 使用
 
@@ -35,12 +35,12 @@ node skill/ai-native-score/scripts/cli.mjs evaluate --collection reports/collect
 
 准确格式见[SKILL.md](skill/ai-native-score/SKILL.md)和`schemas/`。输出report.md、离线report.html、report.json及聚合public-score.json；新目录和私密文件，不覆盖旧结果。日期按UTC自然日。
 
-后端上线且用户明确选择公开时：
+用户明确选择公开时（默认站点已上线，可用 `--site` 指定其他兼容站点）：
 
 ```sh
-node skill/ai-native-score/scripts/cli.mjs publish-plan --score reports/assessment/public-score.json --site <已部署HTTPS站点> --nickname "可选昵称"
+node skill/ai-native-score/scripts/cli.mjs publish-plan --score reports/assessment/public-score.json --nickname "可选昵称"
 # 核对全部字段与目标，并获得本次提交确认后：
-node skill/ai-native-score/scripts/cli.mjs publish --score reports/assessment/public-score.json --site <同一站点> --nickname "同一昵称" --confirm-public <计划摘要> --receipt reports/submission.receipt.json
+node skill/ai-native-score/scripts/cli.mjs publish --score reports/assessment/public-score.json --nickname "同一昵称" --confirm-public <计划摘要> --receipt reports/submission.receipt.json
 ```
 
 CLI只上传版本、六维分数、总分/区间、覆盖率、证据质量、类型及选填昵称。原文、源码、日期、任务ID、证据和路径不上传。返回网页链接；删除token仅以0600写入私密receipt、通过Authorization传送，不在URL或聊天中展示。网络失败保留同一receipt重试。

@@ -356,6 +356,7 @@ function radarSvg(s, options = {}) {
 
 // src/client.ts
 import { createHash as createHash2, randomBytes, randomUUID } from "node:crypto";
+var DEFAULT_SITE = "https://ai-native-score.laolv-wenxiang.workers.dev";
 function siteOrigin(site) {
   const u = new URL(site);
   if (u.username || u.password || u.search || u.hash || u.pathname !== "/" || u.protocol !== "https:" && !(u.protocol === "http:" && ["localhost", "127.0.0.1", "[::1]"].includes(u.hostname))) throw Error("\u76EE\u6807\u9700\u4E3AHTTPS\u7AD9\u70B9\u6216\u672C\u673A\u6D4B\u8BD5\u5730\u5740");
@@ -420,7 +421,7 @@ async function main() {
   if (command === "publish-plan") {
     const input = await load(option("score") ?? "reports/assessment/public-score.json");
     if (option("nickname") !== void 0) input.nickname = option("nickname");
-    const plan = publicationPlan(input, option("site") ?? "");
+    const plan = publicationPlan(input, option("site") ?? DEFAULT_SITE);
     console.log(JSON.stringify({ publicFields: plan.score, target: plan.origin, confirmation: plan.confirmation }, null, 2));
     return;
   }
@@ -433,7 +434,7 @@ async function main() {
       existing = await load(path);
     } catch {
     }
-    const prepared = preparePublication(input, option("site") ?? "", option("confirm-public") ?? "", existing);
+    const prepared = preparePublication(input, option("site") ?? DEFAULT_SITE, option("confirm-public") ?? "", existing);
     if (!existing) {
       await mkdir(dirname(path), { recursive: true, mode: 448 });
       await save(path, JSON.stringify(prepared.receipt, null, 2));
@@ -486,7 +487,7 @@ async function main() {
     console.log("\u5DF2\u5BFC\u51FA\u805A\u5408\u526F\u672C\uFF0C\u5C1A\u672A\u4E0A\u4F20\u3002");
     return;
   }
-  console.log("AI Native Score\nplan --scope scope.local.json\nscan --scope scope.local.json --confirm-scope <plan\u6458\u8981> --out reports/collection\nevaluate --collection <\u79C1\u5BC6\u6536\u96C6\u7ED3\u679C> --evaluation <agent\u751F\u6210\u51B3\u7B56> --out reports/assessment\npublish-plan --score <\u805A\u5408\u5206\u6570> --site <HTTPS\u7AD9\u70B9>\npublish --score <\u805A\u5408\u5206\u6570> --site <\u7AD9\u70B9> --confirm-public <\u8BA1\u5212\u6458\u8981> --receipt <\u79C1\u5BC6\u51ED\u636E>\ndelete --receipt <\u79C1\u5BC6\u51ED\u636E> --confirm-delete <\u5BF9\u5E94ID>\n\u6240\u6709\u6536\u96C6\u4E0E\u8BC4\u4F30\u547D\u4EE4\u96F6\u7F51\u7EDC\uFF1B\u53EA\u6709\u5355\u72EC\u786E\u8BA4\u7684publish/delete\u8054\u7F51\u3002");
+  console.log("AI Native Score\nplan --scope scope.local.json\nscan --scope scope.local.json --confirm-scope <plan\u6458\u8981> --out reports/collection\nevaluate --collection <\u79C1\u5BC6\u6536\u96C6\u7ED3\u679C> --evaluation <agent\u751F\u6210\u51B3\u7B56> --out reports/assessment\npublish-plan --score <\u805A\u5408\u5206\u6570> [--site <HTTPS\u7AD9\u70B9>]\npublish --score <\u805A\u5408\u5206\u6570> [--site <\u7AD9\u70B9>] --confirm-public <\u8BA1\u5212\u6458\u8981> --receipt <\u79C1\u5BC6\u51ED\u636E>\ndelete --receipt <\u79C1\u5BC6\u51ED\u636E> --confirm-delete <\u5BF9\u5E94ID>\n\u6240\u6709\u6536\u96C6\u4E0E\u8BC4\u4F30\u547D\u4EE4\u96F6\u7F51\u7EDC\uFF1B\u53EA\u6709\u5355\u72EC\u786E\u8BA4\u7684publish/delete\u8054\u7F51\u3002");
 }
 function escape(s) {
   return s.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");

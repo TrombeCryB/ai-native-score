@@ -1,5 +1,6 @@
 import {createHash,randomBytes,randomUUID} from 'node:crypto';
 import {validatePublic,type PublicScore} from './model.js';
+export const DEFAULT_SITE='https://ai-native-score.laolv-wenxiang.workers.dev';
 export type Receipt={origin:string;id:string;token:string;payloadDigest:string};
 type Transport=(url:string,init:RequestInit)=>Promise<Response>;
 export function siteOrigin(site:string){const u=new URL(site);if(u.username||u.password||u.search||u.hash||u.pathname!=='/'||(u.protocol!=='https:'&&!(u.protocol==='http:'&&['localhost','127.0.0.1','[::1]'].includes(u.hostname))))throw Error('目标需为HTTPS站点或本机测试地址');return u.origin;}

@@ -5,7 +5,7 @@ description: Evaluate how a user collaborates with AI across authorized work and
 
 # AI Native Score
 
-**Backend pending:** there is currently no default public upload endpoint. Complete local assessment first. Only use an explicitly configured, deployed HTTPS site after confirmation; never substitute the README placeholder as a live endpoint. Website/server/deployment source is maintained privately outside this skill repository.
+**Optional publishing is available:** the default site is https://ai-native-score.laolv-wenxiang.workers.dev. Complete the local assessment first and show the exact aggregate fields and destination before obtaining explicit publication confirmation. An explicit `--site` overrides the default. Website/server/deployment source is maintained privately outside this skill repository.
 
 Produce an evidence-based local evaluation, not a certification. Read [references/methodology.md](references/methodology.md) for the original am-0.1 rubric and [references/privacy.md](references/privacy.md) for data flow. Never equate tools installed, skill count, token use, multi-agent count, or commit count with competence.
 
@@ -45,7 +45,7 @@ Run `node scripts/cli.mjs evaluate --collection <collection.private.json> --eval
 
 Only full-coverage results may enter the public ranking. Explain incomplete coverage privately in the local report instead. Keep raw history, source, evidence, dates, task IDs and local paths out of uploads and git.
 
-If sharing is requested, run `node scripts/cli.mjs publish-plan --score <public-score.json> --site <configured-HTTPS-origin> --nickname <optional-nickname>`. Show the exact public fields and destination to the user. Scores and nicknames can be personal information; get explicit confirmation for this submission. Permission to scan is not permission to publish. A prior confirmation is reusable only for the same fields and site.
+If sharing is requested, run `node scripts/cli.mjs publish-plan --score <public-score.json> --nickname <optional-nickname>` (omit nickname when absent). Use `--site <configured-HTTPS-origin>` only for a selected alternate site. Show the exact public fields and destination to the user. Scores and nicknames can be personal information; get explicit confirmation for this submission. Permission to scan is not permission to publish. A prior confirmation is reusable only for the same fields and site.
 
 Then run `node scripts/cli.mjs publish` with identical arguments, `--confirm-public <plan-digest>` and `--receipt <private-path>`. The CLI saves a random deletion credential before network I/O, uploads aggregate fields only, and returns the page URL. Return that URL to the user; never print the receipt/token or place it in a share link. On uncertain network failure, retain the receipt and retry the same submission; do not create a new identity. If no deployed site is configured, complete the local evaluation and report that upload is unavailable. Do not initiate new provider login or broader permissions just to upload.
 
