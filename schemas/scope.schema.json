@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-mirror:scope:am-0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "mode": {
+      "enum": [
+        "structure",
+        "deep"
+      ]
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 1024
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 1024
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "histories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "adapter": {
+            "enum": [
+              "codex",
+              "hermes-json",
+              "hermes-sqlite"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "maxLength": 1024
+          },
+          "instance": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9_.-]+$"
+          }
+        },
+        "required": [
+          "adapter",
+          "path",
+          "instance"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "from": {
+      "type": "string",
+      "format": "date"
+    },
+    "to": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "mode",
+    "projects",
+    "agents",
+    "histories",
+    "from",
+    "to"
+  ]
+}

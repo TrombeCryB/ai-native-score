@@ -1,0 +1,14 @@
+import {writeFile} from 'node:fs/promises';
+const num={type:'number',minimum:0,maximum:100};
+const arr=(items,min,max=min)=>({type:'array',items,minItems:min,maxItems:max});
+const obj=(properties,required=Object.keys(properties))=>({type:'object',additionalProperties:false,properties,required});
+const score=obj({scoringVersion:{const:'am-0.1'},kind:{enum:['local-assessment','self-report']},dimensions:arr({anyOf:[num,{type:'null'}]},6),total:{anyOf:[num,{type:'null'}]},interval:arr(num,2),coverage:{type:'number',minimum:0,maximum:1},confidence:{enum:['low','medium','high','unknown']},nickname:{type:'string',maxLength:24,pattern:'^[^<>\\u0000-\\u001f\\u007f]*$'}},['scoringVersion','kind','dimensions','total','interval','coverage','confidence']);
+const rating=obj({value:{anyOf:[{type:'integer',minimum:0,maximum:4},{type:'null'}]},confidence:{type:'number',minimum:0,maximum:1},evidence:arr({type:'string',pattern:'^e[0-9]+$'},0,128),basis:{enum:['declared','observed','self-report','unknown']}});
+const evidence=obj({id:{type:'string',pattern:'^e[0-9]+$'},source:{enum:['project-structure','agent-structure','workflow-record']},fact:{type:'string',maxLength:160},strength:{enum:['structure','declaration','observation']}});
+const summary=obj(Object.fromEntries(['dimensions','total','interval','coverage','confidence'].map(k=>[k,score.properties[k]])));
+const report=obj({schemaVersion:{const:1},scoringVersion:{const:'am-0.1'},kind:{enum:['local-assessment','synthetic']},ratings:arr(arr(rating,4),6),evidence:arr(evidence,0,128),summary});
+const text={type:'string',maxLength:2000};
+const decision=obj({axis:{type:'integer',minimum:0,maximum:5},indicator:{type:'integer',minimum:0,maximum:3},value:rating.properties.value,quality:{enum:['low','medium','high']},support:rating.properties.evidence,counterexamples:rating.properties.evidence,rationale:text,humanContribution:text,agentActivity:text,outcome:text});
+const evaluation=obj({decisions:arr(decision,24),taskGroups:{type:'object',additionalProperties:{type:'string',maxLength:64}},narrative:obj(Object.fromEntries(['strengths','gaps','workPatterns','lifePatterns','actions','limitations'].map(k=>[k,arr(text,0,12)])))},['decisions','narrative']);
+const scope=obj({mode:{enum:['structure','deep']},projects:arr({type:'string',maxLength:1024},0,12),agents:arr({type:'string',maxLength:1024},0,12),histories:arr(obj({adapter:{enum:['codex','hermes-json','hermes-sqlite']},path:{type:'string',maxLength:1024},instance:{type:'string',maxLength:64,pattern:'^[A-Za-z0-9_.-]+$'}}),0,12),from:{type:'string',format:'date'},to:{type:'string',format:'date'}});
+for(const[name,schema]of Object.entries({public:score,report,evaluation,scope}))await writeFile(`schemas/${name}.schema.json`,JSON.stringify({$schema:'https://json-schema.org/draft/2020-12/schema',$id:`urn:agent-mirror:${name}:am-0.1`,...schema},null,2)+'\n');

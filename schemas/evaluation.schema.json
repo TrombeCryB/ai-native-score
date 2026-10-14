@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-mirror:evaluation:am-0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "axis": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "indicator": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "quality": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "support": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^e[0-9]+$"
+            },
+            "minItems": 0,
+            "maxItems": 128
+          },
+          "counterexamples": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^e[0-9]+$"
+            },
+            "minItems": 0,
+            "maxItems": 128
+          },
+          "rationale": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "humanContribution": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "agentActivity": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "outcome": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "axis",
+          "indicator",
+          "value",
+          "quality",
+          "support",
+          "counterexamples",
+          "rationale",
+          "humanContribution",
+          "agentActivity",
+          "outcome"
+        ]
+      },
+      "minItems": 24,
+      "maxItems": 24
+    },
+    "taskGroups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "maxLength": 64
+      }
+    },
+    "narrative": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strengths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "workPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "lifePatterns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "strengths",
+        "gaps",
+        "workPatterns",
+        "lifePatterns",
+        "actions",
+        "limitations"
+      ]
+    }
+  },
+  "required": [
+    "decisions",
+    "narrative"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-mirror:report:am-0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "scoringVersion": {
+      "const": "am-0.1"
+    },
+    "kind": {
+      "enum": [
+        "local-assessment",
+        "synthetic"
+      ]
+    },
+    "ratings": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^e[0-9]+$"
+              },
+              "minItems": 0,
+              "maxItems": 128
+            },
+            "basis": {
+              "enum": [
+                "declared",
+                "observed",
+                "self-report",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "confidence",
+            "evidence",
+            "basis"
+          ]
+        },
+        "minItems": 4,
+        "maxItems": 4
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^e[0-9]+$"
+          },
+          "source": {
+            "enum": [
+              "project-structure",
+              "agent-structure",
+              "workflow-record"
+            ]
+          },
+          "fact": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "strength": {
+            "enum": [
+              "structure",
+              "declaration",
+              "observation"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "fact",
+          "strength"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 128
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "total": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "interval": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "dimensions",
+        "total",
+        "interval",
+        "coverage",
+        "confidence"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "scoringVersion",
+    "kind",
+    "ratings",
+    "evidence",
+    "summary"
+  ]
+}

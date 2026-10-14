@@ -1,0 +1,245 @@
+{
+  "report": {
+    "schemaVersion": 1,
+    "scoringVersion": "am-0.1",
+    "kind": "synthetic",
+    "ratings": [
+      [
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        }
+      ],
+      [
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        }
+      ],
+      [
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        }
+      ],
+      [
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        }
+      ],
+      [
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        }
+      ],
+      [
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        },
+        {
+          "value": null,
+          "confidence": 0,
+          "evidence": [],
+          "basis": "unknown"
+        }
+      ]
+    ],
+    "evidence": [],
+    "summary": {
+      "dimensions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "total": null,
+      "interval": [
+        0,
+        100
+      ],
+      "coverage": 0,
+      "confidence": "unknown"
+    }
+  },
+  "ledger": [
+    {
+      "id": "e1",
+      "task": "synthetic-task-0",
+      "date": "2026-10-01",
+      "actor": "human",
+      "instance": "codex",
+      "text": "合成人类任务：明确目标、范围、验收，要求检查并保留控制。",
+      "untrusted": true
+    },
+    {
+      "id": "e2",
+      "task": "synthetic-task-0",
+      "date": "2026-10-01",
+      "actor": "agent",
+      "instance": "codex",
+      "text": "合成 agent 产出，已报告检查与限制。",
+      "untrusted": true
+    },
+    {
+      "id": "e3",
+      "task": "synthetic-task-1",
+      "date": "2026-10-01",
+      "actor": "human",
+      "instance": "codex",
+      "text": "合成人类任务：明确目标、范围、验收，要求检查并保留控制。",
+      "untrusted": true
+    },
+    {
+      "id": "e4",
+      "task": "synthetic-task-1",
+      "date": "2026-10-01",
+      "actor": "agent",
+      "instance": "codex",
+      "text": "合成 agent 产出，已报告检查与限制。",
+      "untrusted": true
+    },
+    {
+      "id": "e5",
+      "task": "synthetic-task-2",
+      "date": "2026-10-01",
+      "actor": "human",
+      "instance": "default",
+      "text": "合成人类任务：明确目标、范围、验收，要求检查并保留控制。",
+      "untrusted": true
+    },
+    {
+      "id": "e6",
+      "task": "synthetic-task-2",
+      "date": "2026-10-01",
+      "actor": "agent",
+      "instance": "default",
+      "text": "合成 agent 产出，已报告检查与限制。",
+      "untrusted": true
+    }
+  ],
+  "stats": {
+    "files": 3,
+    "bytes": 1024,
+    "skipped": 0,
+    "truncated": false
+  }
+}

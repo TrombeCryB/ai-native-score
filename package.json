@@ -1,0 +1,21 @@
+{
+  "name": "ai-native-score",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && node scripts/build.mjs",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "collect": "node --import tsx src/cli.ts",
+    "package": "npm run build && node scripts/package.mjs",
+    "scan": "node scripts/secret-scan.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

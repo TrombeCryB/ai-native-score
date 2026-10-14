@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+.wrangler/
+.dev.vars*
+.env*
+reports/
+scope.local.json
+*.receipt.json
+.DS_Store
+release/
+evaluation.private.json

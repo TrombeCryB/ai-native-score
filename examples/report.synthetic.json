@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "scoringVersion": "am-0.1",
+  "kind": "synthetic",
+  "ratings": [
+    [
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 3,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e1",
+          "e3",
+          "e5",
+          "e2",
+          "e4",
+          "e6"
+        ],
+        "basis": "observed"
+      }
+    ]
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "strength": "observation"
+    },
+    {
+      "id": "e3",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "strength": "observation"
+    },
+    {
+      "id": "e5",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "strength": "observation"
+    },
+    {
+      "id": "e2",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "strength": "observation"
+    },
+    {
+      "id": "e4",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "strength": "observation"
+    },
+    {
+      "id": "e6",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "strength": "observation"
+    }
+  ],
+  "summary": {
+    "dimensions": [
+      75,
+      75,
+      75,
+      50,
+      75,
+      50
+    ],
+    "total": 67,
+    "interval": [
+      66.667,
+      66.667
+    ],
+    "coverage": 1,
+    "confidence": "medium"
+  }
+}

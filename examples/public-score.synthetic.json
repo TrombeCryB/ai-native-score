@@ -1,0 +1,19 @@
+{
+  "scoringVersion": "am-0.1",
+  "kind": "local-assessment",
+  "dimensions": [
+    75,
+    75,
+    75,
+    50,
+    75,
+    50
+  ],
+  "total": 67,
+  "interval": [
+    66.667,
+    66.667
+  ],
+  "coverage": 1,
+  "confidence": "medium"
+}

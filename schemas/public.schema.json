@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-mirror:public:am-0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scoringVersion": {
+      "const": "am-0.1"
+    },
+    "kind": {
+      "enum": [
+        "local-assessment",
+        "self-report"
+      ]
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "total": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "interval": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "nickname": {
+      "type": "string",
+      "maxLength": 24,
+      "pattern": "^[^<>\\u0000-\\u001f\\u007f]*$"
+    }
+  },
+  "required": [
+    "scoringVersion",
+    "kind",
+    "dimensions",
+    "total",
+    "interval",
+    "coverage",
+    "confidence"
+  ]
+}
