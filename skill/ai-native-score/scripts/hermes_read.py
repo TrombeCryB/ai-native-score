@@ -38,9 +38,12 @@ def task_root(task):
 result = []
 for rowid, task, role, text, timestamp, content_length in rows:
     # Redact before process boundary as well as in TS; never emit raw exceptions or SQL values.
-    text = re.sub(r'^.*(?:api[_ -]?key|token|password|secret|密钥|密码|验证码).*$', '[SECRET LINE]', str(text or ''), flags=re.I|re.M)
+    text = str(text or '')
+    text = re.sub(r'^(\s*(?:Cookie|Set-Cookie)\s*:).*$', r'\1 [SECRET HEADER]', text, flags=re.I|re.M)
+    text = re.sub(r'((?:api[_ -]?key|access[_ -]?token|refresh[_ -]?token|authorization|client[_ -]?secret|password|passwd|密钥|密码|验证码|\btoken\b)\s*[:=]\s*)(?:Bearer\s+)?[^\s,;，；]+', r'\1[SECRET]', text, flags=re.I)
+    text = re.sub(r'((?:one[- ]time (?:password|code)|verification code|OTP|验证码)(?:\s+(?:is|was|为|是))?\s*[:：]?\s*)[A-Za-z0-9-]{4,12}', r'\1[SECRET]', text, flags=re.I)
     text = re.sub(r'\b(?:sk-[\w-]{8,}|gh[pousr]_[\w]{8,}|[\w+/=-]{32,})\b', '[SECRET]', text)
-    text = re.sub(r'https?://\S+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|(?:/Users/|/home/)\S+', '[PRIVATE]', text)
+    text = re.sub(r'https?://[^\s\u3400-\u9fff]+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|(?:/Users/|/home/)[^\s\u3400-\u9fff]+', '[PRIVATE]', text)
     result.append({'locator':'sqlite:messages:rowid='+str(rowid),'truncated':content_length > 6000,'task':str(task_root(task)),'role':role,'text':text,'date':datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).isoformat()})
 db.close()
 print(json.dumps(result, ensure_ascii=False))
