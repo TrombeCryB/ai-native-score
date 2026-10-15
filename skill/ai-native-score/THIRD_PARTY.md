@@ -1,6 +1,6 @@
 # 评分来源对应关系与许可边界
 
-本项目的24项指标、0–4锚点、等权公式、缺证据区间与实现均为原创综合设计 `am-0.1`。以下框架提供概念启发，**没有验证、认证或背书这个分数**。教育素养框架与职业/生活任务表现不能直接画等号。对应关系是本项目作者的设计映射，不是来源作者发布的量表映射。
+本项目的24项指标、0–4锚点、等权公式、缺证据禁评分门槛与实现均为原创综合设计 `am-0.2`。以下框架提供概念启发，**没有验证、认证或背书这个分数**。教育素养框架与职业/生活任务表现不能直接画等号。对应关系是本项目作者的设计映射，不是来源作者发布的量表映射。
 
 | 来源 | 对应原创指标 | 采用的概念与边界 |
 | --- | --- | --- |
@@ -20,3 +20,5 @@
 [Hermes Agent源码](https://github.com/NousResearch/hermes-agent)仅用于了解记录格式；适配器独立编写，不导入执行agent代码。公开skill依赖：TypeScript (Apache-2.0)、tsx/esbuild/Node types (MIT)，锁定版本见package-lock.json及各包LICENSE。
 
 网站、服务端和部署实现独立私有维护，不属于当前skill-only tree；旧公开refs和release按用户确认清理，无法保证缓存或外部副本消失。评分来源只解释方法，不表示上述机构与网站或本项目有关联。
+
+报告开发流程私有使用 [Anthropic doc-coauthoring](https://github.com/anthropics/skills/blob/00756142ab04c82a447693cf373c4e0c554d1005/skills/doc-coauthoring/SKILL.md)，固定commit `00756142ab04c82a447693cf373c4e0c554d1005`；未将其原文放入MIT发行包，未声称其许可为Apache。报告模板由本项目原创，未复制Notion模板或Proprietary报告插件，也未运行Notion流程。

@@ -21,7 +21,7 @@ test ! -e "$HOME/.codex/skills/ai-native-score" && cp -R skill/ai-native-score "
 
 在agent里调用 `$ai-native-score`。选择准确实例、日期与项目后，skill展示扫描范围，执行只读收集，在当前agent模型中分析去敏记录，生成本地中文报告和雷达。已有范围授权无需重复询问，额外私密来源另行选择。
 
-深度报告区分人类贡献和agent活动，结合真实结果、反例与长期工作/生活模式，解释强项、短板、建议和限制。缺证据保持未知，输出可能区间，不能编造满覆盖总分；缺证据结果不进入完整评分排行。仅导入skill或存在配置不证明使用能力。
+深度报告区分人类贡献和agent活动，结合真实结果、反例与长期工作/生活模式，解释强项、短板、建议和限制。缺证据时整体暂不评分：不输出临时总分、六维分、区间或雷达，只给缺口和补查/导出指引；缺证据结果不进入完整评分排行。仅导入skill或存在配置不证明使用能力。
 
 如果agent使用云模型，去敏历史/摘要仍会进入其服务商上下文。本地收集器零网络不等于云agent语义评估完全离线；真正离线应使用本地模型。去敏尽力而为，先核对私密账本。
 
@@ -33,7 +33,7 @@ node skill/ai-native-score/scripts/cli.mjs scan --scope scope.local.json --confi
 node skill/ai-native-score/scripts/cli.mjs evaluate --collection reports/collection/collection.private.json --evaluation evaluation.private.json --out reports/assessment
 ```
 
-准确格式见[SKILL.md](skill/ai-native-score/SKILL.md)和`schemas/`。输出report.md、离线report.html、report.json及聚合public-score.json；新目录和私密文件，不覆盖旧结果。日期按UTC自然日。
+准确格式见[SKILL.md](skill/ai-native-score/SKILL.md)和`schemas/`。输出report.md、离线report.html、report.json及私密evaluation；只有证据完整才有雷达和聚合public-score.json；新目录和私密文件，不覆盖旧结果。日期按UTC自然日。
 
 用户明确选择公开时（默认站点已上线，可用 `--site` 指定其他兼容站点）：
 
@@ -69,3 +69,11 @@ npm run scan
 测试仅用合成数据：未知/区间、证据引用与重复、未使用skill不加分、日期/symlink/FIFO/预算、canary去敏、历史指令不执行、发布确认与目标绑定、凭据重试与删除。模型语义判断和注入抵抗仍需模型层验证，不能由格式测试保证。
 
 [MIT](LICENSE)覆盖原创skill/代码/指标；外部链接保持各自许可。`reports/`、真实范围、receipt、.env和依赖目录不发布。
+
+## am-0.2 证据门槛
+
+先运行 `node skill/ai-native-score/scripts/cli.mjs discover`，区分发现、适配、授权和实际读取。Codex/Hermes支持原生读取及明确多profile；WorkBuddy、OpenClaw、DeepSeek Harness、ZCode、Claude Code、GPT/ChatGPT需选定导出或适配，未知路径不猜。运行可能较长，按来源和有效任务链报告覆盖，不按耗时或记录量给分。
+
+每项需要用户决策/行动、结果、后续独立核验、反证检索、不确定性、下一级差距及可检验改进。多次提出要求不等于稳定实践；明确委派本身可作为相关决策证据，但仍需执行和核验。旧版记录保留版本，不自动删除或改分。
+
+[逐项行为锚点](docs/behavior-anchors.md) · [报告约定](docs/report-guide.md) · [改造审计](docs/implementation-audit.md)。不读取凭据及受限目录，不保证绝对安全；云模型评估仍会接触去敏材料。

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:agent-mirror:report:am-0.1",
+  "$id": "urn:agent-mirror:report:am-0.2",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -8,7 +8,7 @@
       "const": 1
     },
     "scoringVersion": {
-      "const": "am-0.1"
+      "const": "am-0.2"
     },
     "kind": {
       "enum": [
@@ -109,7 +109,7 @@
         ]
       },
       "minItems": 0,
-      "maxItems": 128
+      "maxItems": 512
     },
     "summary": {
       "type": "object",
@@ -144,16 +144,6 @@
             }
           ]
         },
-        "interval": {
-          "type": "array",
-          "items": {
-            "type": "number",
-            "minimum": 0,
-            "maximum": 100
-          },
-          "minItems": 2,
-          "maxItems": 2
-        },
         "coverage": {
           "type": "number",
           "minimum": 0,
@@ -166,14 +156,58 @@
             "high",
             "unknown"
           ]
+        },
+        "interval": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
         "dimensions",
         "total",
-        "interval",
         "coverage",
-        "confidence"
+        "confidence",
+        "interval"
+      ]
+    },
+    "assessmentGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "blocked"
+          ]
+        },
+        "reviewComplete": {
+          "type": "boolean"
+        },
+        "familiesFinalized": {
+          "type": "boolean"
+        },
+        "counterexamplesReviewed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "status",
+        "reviewComplete",
+        "familiesFinalized",
+        "counterexamplesReviewed"
       ]
     }
   },

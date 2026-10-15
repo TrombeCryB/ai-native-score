@@ -1,18 +1,18 @@
 {
-  "scoringVersion": "am-0.1",
+  "scoringVersion": "am-0.2",
   "kind": "local-assessment",
   "dimensions": [
-    75,
-    75,
-    75,
     50,
-    75,
+    50,
+    50,
+    50,
+    50,
     50
   ],
-  "total": 67,
+  "total": 50,
   "interval": [
-    66.667,
-    66.667
+    50,
+    50
   ],
   "coverage": 1,
   "confidence": "medium"

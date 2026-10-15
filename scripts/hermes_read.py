@@ -14,7 +14,7 @@ if not required.issubset(columns):
     raise SystemExit('Unsupported Hermes messages schema')
 lo = datetime.datetime.fromisoformat(start).replace(tzinfo=datetime.timezone.utc).timestamp()
 hi = datetime.datetime.fromisoformat(end).replace(tzinfo=datetime.timezone.utc).timestamp() + 86400
-rows = db.execute("SELECT session_id,role,substr(content,1,6000),timestamp FROM messages WHERE timestamp>=? AND timestamp<? AND role IN ('user','assistant') ORDER BY timestamp LIMIT 500", (lo,hi))
+rows = db.execute("SELECT rowid,session_id,role,substr(content,1,6000),timestamp,length(content) FROM messages WHERE timestamp>=? AND timestamp<? AND role IN ('user','assistant') ORDER BY timestamp LIMIT 500", (lo,hi))
 session_columns = {row[1] for row in db.execute('PRAGMA table_info(sessions)')}
 can_group = {'id','parent_session_id'}.issubset(session_columns)
 roots = {}
@@ -36,11 +36,11 @@ def task_root(task):
     roots[original] = task
     return task
 result = []
-for task, role, text, timestamp in rows:
+for rowid, task, role, text, timestamp, content_length in rows:
     # Redact before process boundary as well as in TS; never emit raw exceptions or SQL values.
     text = re.sub(r'^.*(?:api[_ -]?key|token|password|secret|密钥|密码|验证码).*$', '[SECRET LINE]', str(text or ''), flags=re.I|re.M)
     text = re.sub(r'\b(?:sk-[\w-]{8,}|gh[pousr]_[\w]{8,}|[\w+/=-]{32,})\b', '[SECRET]', text)
     text = re.sub(r'https?://\S+|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|(?:/Users/|/home/)\S+', '[PRIVATE]', text)
-    result.append({'task':str(task_root(task)),'role':role,'text':text,'date':datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).isoformat()})
+    result.append({'locator':'sqlite:messages:rowid='+str(rowid),'truncated':content_length > 6000,'task':str(task_root(task)),'role':role,'text':text,'date':datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).isoformat()})
 db.close()
 print(json.dumps(result, ensure_ascii=False))

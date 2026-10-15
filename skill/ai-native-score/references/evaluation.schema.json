@@ -1,15 +1,194 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:agent-mirror:evaluation:am-0.1",
+  "$id": "urn:agent-mirror:evaluation:am-0.2",
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reviewedEvidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "maxItems": 500
+        },
+        "excludedEvidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string",
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "id",
+              "reason"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 500
+        },
+        "taskFamiliesFinalized": {
+          "type": "boolean"
+        },
+        "counterexampleSearchComplete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "reviewedEvidence",
+        "excludedEvidence",
+        "taskFamiliesFinalized",
+        "counterexampleSearchComplete"
+      ]
+    },
+    "priorities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "verify": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^e[0-9]+$"
+            },
+            "minItems": 0,
+            "maxItems": 128
+          }
+        },
+        "required": [
+          "action",
+          "verify",
+          "evidence"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 3
+    },
     "decisions": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "behavior": {
+                  "type": "string"
+                },
+                "result": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                },
+                "enactment": {
+                  "enum": [
+                    "decision",
+                    "action",
+                    "request-only"
+                  ]
+                },
+                "outcome": {
+                  "enum": [
+                    "verified",
+                    "failure",
+                    "claim-only"
+                  ]
+                },
+                "attribution": {
+                  "enum": [
+                    "human",
+                    "agent",
+                    "unknown"
+                  ]
+                },
+                "verificationMethod": {
+                  "enum": [
+                    "human-followup",
+                    "independent-artifact"
+                  ]
+                },
+                "scope": {
+                  "type": "string",
+                  "maxLength": 2000
+                }
+              },
+              "required": [
+                "behavior",
+                "result",
+                "verification",
+                "enactment",
+                "outcome",
+                "attribution",
+                "verificationMethod",
+                "scope"
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 128
+          },
+          "counterReview": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "uncertainty": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "nextLevelGap": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "conflict": {
+            "enum": [
+              "none-found",
+              "resolved",
+              "unresolved"
+            ]
+          },
+          "improvement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "action": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "verify": {
+                "type": "string",
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "action",
+              "verify"
+            ]
+          },
           "axis": {
             "type": "integer",
             "minimum": 0,
@@ -75,6 +254,12 @@
           }
         },
         "required": [
+          "observations",
+          "counterReview",
+          "uncertainty",
+          "nextLevelGap",
+          "conflict",
+          "improvement",
           "axis",
           "indicator",
           "value",
@@ -168,6 +353,8 @@
   },
   "required": [
     "decisions",
-    "narrative"
+    "narrative",
+    "priorities",
+    "review"
   ]
 }

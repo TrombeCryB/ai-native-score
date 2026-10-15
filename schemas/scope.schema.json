@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:agent-mirror:scope:am-0.1",
+  "$id": "urn:agent-mirror:scope:am-0.2",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -17,7 +17,7 @@
         "maxLength": 1024
       },
       "minItems": 0,
-      "maxItems": 12
+      "maxItems": 256
     },
     "agents": {
       "type": "array",
@@ -26,7 +26,7 @@
         "maxLength": 1024
       },
       "minItems": 0,
-      "maxItems": 12
+      "maxItems": 256
     },
     "histories": {
       "type": "array",
@@ -38,7 +38,8 @@
             "enum": [
               "codex",
               "hermes-json",
-              "hermes-sqlite"
+              "hermes-sqlite",
+              "normalized-export"
             ]
           },
           "path": {
@@ -58,7 +59,7 @@
         ]
       },
       "minItems": 0,
-      "maxItems": 12
+      "maxItems": 256
     },
     "from": {
       "type": "string",

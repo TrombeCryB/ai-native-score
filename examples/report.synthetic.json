@@ -1,166 +1,46 @@
 {
   "schemaVersion": 1,
-  "scoringVersion": "am-0.1",
+  "scoringVersion": "am-0.2",
   "kind": "synthetic",
   "ratings": [
     [
       {
-        "value": 3,
+        "value": 2,
         "confidence": 0.6,
         "evidence": [
           "e1",
-          "e3",
-          "e5",
           "e2",
+          "e3"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
           "e4",
+          "e5",
           "e6"
         ],
         "basis": "observed"
       },
       {
-        "value": 3,
+        "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e7",
+          "e8",
+          "e9"
         ],
         "basis": "observed"
       },
       {
-        "value": 3,
+        "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      }
-    ],
-    [
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      }
-    ],
-    [
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e10",
+          "e11",
+          "e12"
         ],
         "basis": "observed"
       }
@@ -170,12 +50,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e13",
+          "e14",
+          "e15"
         ],
         "basis": "observed"
       },
@@ -183,12 +60,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e16",
+          "e17",
+          "e18"
         ],
         "basis": "observed"
       },
@@ -196,12 +70,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e19",
+          "e20",
+          "e21"
         ],
         "basis": "observed"
       },
@@ -209,66 +80,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      }
-    ],
-    [
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
-        ],
-        "basis": "observed"
-      },
-      {
-        "value": 3,
-        "confidence": 0.6,
-        "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e22",
+          "e23",
+          "e24"
         ],
         "basis": "observed"
       }
@@ -278,12 +92,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e25",
+          "e26",
+          "e27"
         ],
         "basis": "observed"
       },
@@ -291,12 +102,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e28",
+          "e29",
+          "e30"
         ],
         "basis": "observed"
       },
@@ -304,12 +112,9 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e31",
+          "e32",
+          "e33"
         ],
         "basis": "observed"
       },
@@ -317,12 +122,135 @@
         "value": 2,
         "confidence": 0.6,
         "evidence": [
-          "e1",
-          "e3",
-          "e5",
-          "e2",
-          "e4",
-          "e6"
+          "e34",
+          "e35",
+          "e36"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e37",
+          "e38",
+          "e39"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e40",
+          "e41",
+          "e42"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e43",
+          "e44",
+          "e45"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e46",
+          "e47",
+          "e48"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e49",
+          "e50",
+          "e51"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e52",
+          "e53",
+          "e54"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e55",
+          "e56",
+          "e57"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e58",
+          "e59",
+          "e60"
+        ],
+        "basis": "observed"
+      }
+    ],
+    [
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e61",
+          "e62",
+          "e63"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e64",
+          "e65",
+          "e66"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e67",
+          "e68",
+          "e69"
+        ],
+        "basis": "observed"
+      },
+      {
+        "value": 2,
+        "confidence": 0.6,
+        "evidence": [
+          "e70",
+          "e71",
+          "e72"
         ],
         "basis": "observed"
       }
@@ -332,55 +260,457 @@
     {
       "id": "e1",
       "source": "workflow-record",
-      "fact": "已授权去敏行为记录；详见本地私密证据账本",
-      "strength": "observation"
-    },
-    {
-      "id": "e3",
-      "source": "workflow-record",
-      "fact": "已授权去敏行为记录；详见本地私密证据账本",
-      "strength": "observation"
-    },
-    {
-      "id": "e5",
-      "source": "workflow-record",
-      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
       "strength": "observation"
     },
     {
       "id": "e2",
       "source": "workflow-record",
-      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e3",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
       "strength": "observation"
     },
     {
       "id": "e4",
       "source": "workflow-record",
-      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e5",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
       "strength": "observation"
     },
     {
       "id": "e6",
       "source": "workflow-record",
-      "fact": "已授权去敏行为记录；详见本地私密证据账本",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e7",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e8",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e9",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e10",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e11",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e12",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e13",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e14",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e15",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e16",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e17",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e18",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e19",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e20",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e21",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e22",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e23",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e24",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e25",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e26",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e27",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e28",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e29",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e30",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e31",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e32",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e33",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e34",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e35",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e36",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e37",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e38",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e39",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e40",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e41",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e42",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e43",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e44",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e45",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e46",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e47",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e48",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e49",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e50",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e51",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e52",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e53",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e54",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e55",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e56",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e57",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e58",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e59",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e60",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e61",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e62",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e63",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e64",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e65",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e66",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e67",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e68",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e69",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e70",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e71",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
+      "strength": "observation"
+    },
+    {
+      "id": "e72",
+      "source": "workflow-record",
+      "fact": "已授权去敏行为链；具体支持范围、反证与核验见私密评估文件",
       "strength": "observation"
     }
   ],
   "summary": {
     "dimensions": [
-      75,
-      75,
-      75,
       50,
-      75,
+      50,
+      50,
+      50,
+      50,
       50
     ],
-    "total": 67,
+    "total": 50,
     "interval": [
-      66.667,
-      66.667
+      50,
+      50
     ],
     "coverage": 1,
     "confidence": "medium"
+  },
+  "assessmentGate": {
+    "status": "ready",
+    "reviewComplete": true,
+    "familiesFinalized": true,
+    "counterexamplesReviewed": true
   }
 }

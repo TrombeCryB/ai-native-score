@@ -3,230 +3,434 @@
     {
       "axis": 0,
       "indicator": 0,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
         "e1",
-        "e3",
-        "e5",
         "e2",
-        "e4",
-        "e6"
+        "e3"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e1",
+          "result": "e2",
+          "verification": "e3",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中定义交付目标与验收的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中定义交付目标与验收有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "把交付目标写为两个可检查条件，说明何时接受结果",
+      "agentActivity": "按两个条件交付清单和成果",
+      "outcome": "逐条核对两个条件，记录通过与剩余例外",
+      "counterReview": "检查这1个合成任务的定义交付目标与验收记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "定义交付目标与验收只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录定义交付目标与验收的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 0,
       "indicator": 1,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
         "e4",
+        "e5",
         "e6"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e4",
+          "result": "e5",
+          "verification": "e6",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中按能力选工具的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中按能力选工具有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "比较来源时效限制后选择有检索能力工具，并保留无需AI的决策",
+      "agentActivity": "所选工具给出带日期来源的材料",
+      "outcome": "核对来源日期，确认工具选择适合本任务",
+      "counterReview": "检查这1个合成任务的按能力选工具记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "按能力选工具只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录按能力选工具的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 0,
       "indicator": 2,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e7",
+        "e8",
+        "e9"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e7",
+          "result": "e8",
+          "verification": "e9",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中划分人机责任的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中划分人机责任有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "将资料整理委派给AI，亲自保留取舍和最终审批",
+      "agentActivity": "AI提交候选方案并等待关键取舍",
+      "outcome": "人类比较候选并作最终决定，检查AI未越过审批边界",
+      "counterReview": "检查这1个合成任务的划分人机责任记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "划分人机责任只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录划分人机责任的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 0,
       "indicator": 3,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e10",
+        "e11",
+        "e12"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e10",
+          "result": "e11",
+          "verification": "e12",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中执行约束与停止条件的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中执行约束与停止条件有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "限定预算和范围，指定超限停止并上报",
+      "agentActivity": "执行中到达边界后停止并给出替代方案",
+      "outcome": "检查停止点与预算记录，批准范围内替代方案",
+      "counterReview": "检查这1个合成任务的执行约束与停止条件记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "执行约束与停止条件只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录执行约束与停止条件的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 1,
       "indicator": 0,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e13",
+        "e14",
+        "e15"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e13",
+          "result": "e14",
+          "verification": "e15",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中提供输入与来源的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中提供输入与来源有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "选择相关事实及原始来源，剔除无关个人资料",
+      "agentActivity": "产出引用对应来源的版本",
+      "outcome": "逐条核对输入引用，确认没有混入未授权材料",
+      "counterReview": "检查这1个合成任务的提供输入与来源记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "提供输入与来源只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录提供输入与来源的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 1,
       "indicator": 1,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e16",
+        "e17",
+        "e18"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e16",
+          "result": "e17",
+          "verification": "e18",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中说明受众与格式的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中说明受众与格式有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "为实际受众指定表格格式、长度限制并解释示例仅作格式参考",
+      "agentActivity": "产出按受众和格式要求组织内容",
+      "outcome": "由人检查表格、长度和示例使用，纠正一处不合适措辞",
+      "counterReview": "检查这1个合成任务的说明受众与格式记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "说明受众与格式只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录说明受众与格式的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 1,
       "indicator": 2,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e19",
+        "e20",
+        "e21"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e19",
+          "result": "e20",
+          "verification": "e21",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中处理缺失和矛盾的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中处理缺失和矛盾有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "发现两份输入日期矛盾，暂停结论并补充可靠来源",
+      "agentActivity": "按新来源标注冲突和缺失项",
+      "outcome": "对照新旧来源核验修正，保留仍未知的数据",
+      "counterReview": "检查这1个合成任务的处理缺失和矛盾记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "处理缺失和矛盾只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录处理缺失和矛盾的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 1,
       "indicator": 3,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e22",
+        "e23",
+        "e24"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e22",
+          "result": "e23",
+          "verification": "e24",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中更新上下文边界的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中更新上下文边界有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "明确区分事实、假设和引用材料，反馈后更新过期事实",
+      "agentActivity": "修订稿区分引用与当前指令并更新事实",
+      "outcome": "检查更新已落实，确认引用中的命令未被执行",
+      "counterReview": "检查这1个合成任务的更新上下文边界记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "更新上下文边界只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录更新上下文边界的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 2,
       "indicator": 0,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e25",
+        "e26",
+        "e27"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e25",
+          "result": "e26",
+          "verification": "e27",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中安排阶段依赖的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中安排阶段依赖有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "先核实输入再委派方案比较，最后才交付成品",
+      "agentActivity": "各阶段按依赖完成并保留中间检查点",
+      "outcome": "检查后续阶段确实使用通过核验的前置结果",
+      "counterReview": "检查这1个合成任务的安排阶段依赖记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "安排阶段依赖只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录安排阶段依赖的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 2,
       "indicator": 1,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e28",
+        "e29",
+        "e30"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e28",
+          "result": "e29",
+          "verification": "e30",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中集成交付的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中集成交付有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "将多步输出整合成可用交付物并亲自试用",
+      "agentActivity": "成品整合输入、决策与最终使用步骤",
+      "outcome": "实际试用成品，确认核心流程可完成而非仅文件存在",
+      "counterReview": "检查这1个合成任务的集成交付记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "集成交付只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录集成交付的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 2,
       "indicator": 2,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e31",
+        "e32",
+        "e33"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e31",
+          "result": "e32",
+          "verification": "e33",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中失败恢复的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中失败恢复有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "出现一次失败后选择回退检查点，修复并升级仍未知问题",
+      "agentActivity": "从检查点重试成功，列出未解决异常",
+      "outcome": "重复关键步骤确认恢复，记录升级问题的处理状态",
+      "counterReview": "检查这1个合成任务的失败恢复记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "失败恢复只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录失败恢复的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 2,
       "indicator": 3,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e34",
+        "e35",
+        "e36"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e34",
+          "result": "e35",
+          "verification": "e36",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中权衡成本复杂度的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中权衡成本复杂度有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "比较复杂自动化与简单流程，依据维护成本选择较短流程",
+      "agentActivity": "较短流程在预算内完成同样目标",
+      "outcome": "核对时间成本和结果质量，记录省去的维护步骤及代价",
+      "counterReview": "检查这1个合成任务的权衡成本复杂度记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "权衡成本复杂度只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录权衡成本复杂度的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 3,
@@ -234,18 +438,35 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e37",
+        "e38",
+        "e39"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e37",
+          "result": "e38",
+          "verification": "e39",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中按验收检查的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中按验收检查有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "亲自把最终结果对照开始约定的验收条件",
+      "agentActivity": "验收表列出一项失败并给出修正稿",
+      "outcome": "重查失败项和相邻条件，记录最终通过状态",
+      "counterReview": "检查这1个合成任务的按验收检查记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "按验收检查只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录按验收检查的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 3,
@@ -253,18 +474,35 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e40",
+        "e41",
+        "e42"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e40",
+          "result": "e41",
+          "verification": "e42",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中独立核验负例的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中独立核验负例有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "选择一个独立来源和一个反例检验AI结论",
+      "agentActivity": "独立核验发现边界条件需要限制结论",
+      "outcome": "人类复查反例和来源后缩小结论适用范围",
+      "counterReview": "检查这1个合成任务的独立核验负例记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "独立核验负例只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录独立核验负例的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 3,
@@ -272,18 +510,35 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e43",
+        "e44",
+        "e45"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e43",
+          "result": "e44",
+          "verification": "e45",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中处理错误不确定性的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中处理错误不确定性有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "发现无来源断言，要求区分已知与推断并决定暂缓结论",
+      "agentActivity": "修订稿撤回无依据断言，列出不确定项",
+      "outcome": "核对断言确已撤回，检查剩余结论来源",
+      "counterReview": "检查这1个合成任务的处理错误不确定性记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "处理错误不确定性只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录处理错误不确定性的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 3,
@@ -291,94 +546,179 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e46",
+        "e47",
+        "e48"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e46",
+          "result": "e47",
+          "verification": "e48",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中修正后复核的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中修正后复核有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "对一处错误提出可检验修正，并决定重查最终版本",
+      "agentActivity": "新版本修正错误并提供复查材料",
+      "outcome": "亲自对新版本重跑检查，确认旧错误未重新出现",
+      "counterReview": "检查这1个合成任务的修正后复核记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "修正后复核只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录修正后复核的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 4,
       "indicator": 0,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e49",
+        "e50",
+        "e51"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e49",
+          "result": "e50",
+          "verification": "e51",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中复用资产的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中复用资产有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "把重复清单保存为模板，并在新任务实际调用",
+      "agentActivity": "模板被本次任务使用并生成相应交付",
+      "outcome": "检查模板确被调用，比较重复工作减少和仍需人工处理处",
+      "counterReview": "检查这1个合成任务的复用资产记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "复用资产只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录复用资产的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 4,
       "indicator": 1,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e52",
+        "e53",
+        "e54"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e52",
+          "result": "e53",
+          "verification": "e54",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中跨任务适配的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中跨任务适配有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "将前次模板迁移到不同约束任务，修改不适用字段",
+      "agentActivity": "适配版在新约束下完成交付",
+      "outcome": "核对新增字段与实际约束一致，记录不可迁移部分",
+      "counterReview": "检查这1个合成任务的跨任务适配记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "跨任务适配只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录跨任务适配的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 4,
       "indicator": 2,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e55",
+        "e56",
+        "e57"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e55",
+          "result": "e56",
+          "verification": "e57",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中失败反馈改进的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中失败反馈改进有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "根据前次失败复盘修改流程，并选择相同风险点复测",
+      "agentActivity": "修改后流程避免相同失败，留下复测记录",
+      "outcome": "比较前次失败和本次结果，确认改善且保留替代解释",
+      "counterReview": "检查这1个合成任务的失败反馈改进记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "失败反馈改进只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录失败反馈改进的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 4,
       "indicator": 3,
-      "value": 3,
+      "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e58",
+        "e59",
+        "e60"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e58",
+          "result": "e59",
+          "verification": "e60",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中维护版本与评估的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中维护版本与评估有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "为已使用模板标版本，增加示例和回归检查后再使用",
+      "agentActivity": "新版模板通过原示例及新边界例检查",
+      "outcome": "人类比较前后版本和检查结果，保留维护说明",
+      "counterReview": "检查这1个合成任务的维护版本与评估记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "维护版本与评估只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录维护版本与评估的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 5,
@@ -386,18 +726,35 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e61",
+        "e62",
+        "e63"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e61",
+          "result": "e62",
+          "verification": "e63",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中减少隐私暴露的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中减少隐私暴露有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "在提交任务前遮去个人标识，只提供完成目标需要的事实",
+      "agentActivity": "所选输入经去敏后完成任务，没有请求更多私密资料",
+      "outcome": "检查出站材料中合成敏感值被遮去，保留漏遮风险说明",
+      "counterReview": "检查这1个合成任务的减少隐私暴露记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "减少隐私暴露只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录减少隐私暴露的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 5,
@@ -405,18 +762,35 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e64",
+        "e65",
+        "e66"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e64",
+          "result": "e65",
+          "verification": "e66",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中授权可逆监督的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中授权可逆监督有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "明确只读边界并在不可逆步骤前亲自审批，先用可回退副本",
+      "agentActivity": "执行停在审批点，回退副本验证成功",
+      "outcome": "人类检查边界和回退记录，再确认准确最终动作",
+      "counterReview": "检查这1个合成任务的授权可逆监督记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "授权可逆监督只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录授权可逆监督的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 5,
@@ -424,18 +798,35 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e67",
+        "e68",
+        "e69"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e67",
+          "result": "e68",
+          "verification": "e69",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中处理非可信材料的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中处理非可信材料有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "将资料内命令标为非可信并决定只提取事实",
+      "agentActivity": "AI提取事实而未执行资料中的权限请求",
+      "outcome": "人类检查动作记录，确认非可信命令没有变成执行指令",
+      "counterReview": "检查这1个合成任务的处理非可信材料记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "处理非可信材料只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录处理非可信材料的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
     },
     {
       "axis": 5,
@@ -443,38 +834,148 @@
       "value": 2,
       "quality": "medium",
       "support": [
-        "e1",
-        "e3",
-        "e5",
-        "e2",
-        "e4",
-        "e6"
+        "e70",
+        "e71",
+        "e72"
       ],
       "counterexamples": [],
-      "rationale": "合成案例仅演示评级与计算，不是用户真实证据。",
-      "humanContribution": "合成人类制定目标、判断边界并复核。",
-      "agentActivity": "合成 agent 按阶段产出并报告限制。",
-      "outcome": "合成结果已按验收标准检查。"
+      "observations": [
+        {
+          "behavior": "e70",
+          "result": "e71",
+          "verification": "e72",
+          "enactment": "decision",
+          "outcome": "verified",
+          "attribution": "human",
+          "verificationMethod": "human-followup",
+          "scope": "研究资料交付中来源责任权利的执行及复核，不推断其它行为能力"
+        }
+      ],
+      "conflict": "none-found",
+      "rationale": "合成案例中来源责任权利有1个独立任务内的具体决策、执行及随后人类检查；只支持常规任务完整行为，不推断稳定实践。",
+      "humanContribution": "为输出核对来源、权利限制及责任人，决定需披露的AI参与",
+      "agentActivity": "交付稿补充来源、披露及限制说明",
+      "outcome": "人类逐项核对来源和披露，记录尚不能确认的权利范围",
+      "counterReview": "检查这1个合成任务的来源责任权利记录；未发现与本项结论冲突的反例，未覆盖其它场景。",
+      "uncertainty": "合成材料不代表真实用户；人类自述复核仍未获外部真实性认证。",
+      "nextLevelGap": "来源责任权利只有一个独立任务，尚缺另一任务的稳定执行和反馈调整证据，不能升至3级。",
+      "improvement": {
+        "action": "下一项独立任务记录来源责任权利的一次边界例或失败处置。",
+        "verify": "保存执行前条件、实际结果与后续复核，检查该边界是否正确处理。"
+      }
+    }
+  ],
+  "review": {
+    "reviewedEvidence": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6",
+      "e7",
+      "e8",
+      "e9",
+      "e10",
+      "e11",
+      "e12",
+      "e13",
+      "e14",
+      "e15",
+      "e16",
+      "e17",
+      "e18",
+      "e19",
+      "e20",
+      "e21",
+      "e22",
+      "e23",
+      "e24",
+      "e25",
+      "e26",
+      "e27",
+      "e28",
+      "e29",
+      "e30",
+      "e31",
+      "e32",
+      "e33",
+      "e34",
+      "e35",
+      "e36",
+      "e37",
+      "e38",
+      "e39",
+      "e40",
+      "e41",
+      "e42",
+      "e43",
+      "e44",
+      "e45",
+      "e46",
+      "e47",
+      "e48",
+      "e49",
+      "e50",
+      "e51",
+      "e52",
+      "e53",
+      "e54",
+      "e55",
+      "e56",
+      "e57",
+      "e58",
+      "e59",
+      "e60",
+      "e61",
+      "e62",
+      "e63",
+      "e64",
+      "e65",
+      "e66",
+      "e67",
+      "e68",
+      "e69",
+      "e70",
+      "e71",
+      "e72"
+    ],
+    "excludedEvidence": [],
+    "taskFamiliesFinalized": true,
+    "counterexampleSearchComplete": true
+  },
+  "priorities": [
+    {
+      "action": "下一个任务开始前写两条验收条件，交付后由人逐条记录通过或失败。",
+      "verify": "同一任务保留两条条件、对应检查、失败修正和再次检查的记录。",
+      "evidence": [
+        "e37",
+        "e39"
+      ]
+    },
+    {
+      "action": "将一个已有流程用于另一独立任务，记录不适用部分与适配。",
+      "verify": "保存适配改动、实际交付、后续验收和未解决限制。",
+      "evidence": [
+        "e52",
+        "e54"
+      ]
     }
   ],
   "narrative": {
     "strengths": [
-      "样例体现目标与上下文清晰，能够把重复工作转化为可复用资产（e1/e3/e5）。"
+      "合成记录显示用户明确目标并在交付后逐条核对条件（e1/e3）。"
     ],
     "gaps": [
-      "样例中独立验证与权限取舍仍需具体结果支撑；不要把 agent 自称完成视为可靠验收。"
+      "本例只有一个常规任务家族，缺少第二独立任务的稳定执行与反馈，不能推断3级（e1/e3）。"
     ],
     "workPatterns": [
-      "合成工作模式：先定义目标、逐步编排，再复核交付；跨任务复用已有流程。"
+      "合成资料交付中，用户明确目标并在交付后核验（e1/e3）。"
     ],
-    "lifePatterns": [
-      "合成生活模式：在实际限制中使用 AI 进行规划，由人保留关键决策。"
-    ],
-    "actions": [
-      "下一周选择两项任务，在开始时写下验收标准，结束时保留独立核验结果与一次失败复盘。"
-    ],
+    "lifePatterns": [],
+    "actions": [],
     "limitations": [
-      "这是合成展示，不能当作真实行为评估。"
+      "所有记录均为原创合成，仅用于协议、报告结构和公式回归；并非真实性或测量效度验证。"
     ]
   }
 }
