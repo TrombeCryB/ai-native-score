@@ -77,3 +77,7 @@ npm run scan
 每项需要用户决策/行动、结果、后续独立核验、反证检索、不确定性、下一级差距及可检验改进。多次提出要求不等于稳定实践；明确委派本身可作为相关决策证据，但仍需执行和核验。旧版记录保留版本，不自动删除或改分。
 
 [逐项行为锚点](docs/behavior-anchors.md) · [报告约定](docs/report-guide.md) · [改造审计](docs/implementation-audit.md)。不读取凭据及受限目录，不保证绝对安全；云模型评估仍会接触去敏材料。
+
+## v0.2.1 全量与分卷
+
+原生scan仍有预算；完整去敏快照使用正式 `pack --collection <完整JSON> --out <分卷目录>`，然后 `evaluate --manifest <manifest.json> --evaluation <完整审阅JSON> --out <新报告目录>`。原evaluate --collection也自动走流式封装。无500事件/12MiB总输入门槛，全部正文与字段保留；哈希、顺序、全局主键、审阅处置及家族统一核验，不按卷出分。内存投影只含引用元数据，完整正文仍在私密卷。详见[全量协议与明确资源界限](docs/full-evidence.md)。网页未升级时仍禁止个人评分上传。

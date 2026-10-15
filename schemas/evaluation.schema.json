@@ -12,9 +12,7 @@
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "minItems": 0,
-          "maxItems": 500
+          }
         },
         "excludedEvidence": {
           "type": "array",
@@ -34,9 +32,7 @@
               "id",
               "reason"
             ]
-          },
-          "minItems": 0,
-          "maxItems": 500
+          }
         },
         "taskFamiliesFinalized": {
           "type": "boolean"
@@ -70,10 +66,8 @@
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^e[0-9]+$"
-            },
-            "minItems": 0,
-            "maxItems": 128
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:@|/#=-]{0,255}$"
+            }
           }
         },
         "required": [
@@ -148,9 +142,7 @@
                 "verificationMethod",
                 "scope"
               ]
-            },
-            "minItems": 0,
-            "maxItems": 128
+            }
           },
           "counterReview": {
             "type": "string",
@@ -222,19 +214,15 @@
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^e[0-9]+$"
-            },
-            "minItems": 0,
-            "maxItems": 128
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:@|/#=-]{0,255}$"
+            }
           },
           "counterexamples": {
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^e[0-9]+$"
-            },
-            "minItems": 0,
-            "maxItems": 128
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:@|/#=-]{0,255}$"
+            }
           },
           "rationale": {
             "type": "string",

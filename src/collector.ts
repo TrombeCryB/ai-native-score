@@ -7,8 +7,8 @@ import {promisify} from 'node:util';
 import {discover,type Discovery} from './discovery.js';
 import {VERSION,unknownRatings,summarize,type Report} from './model.js';
 export type Scope={mode:'structure'|'deep'; projects:string[]; agents:string[]; histories:{adapter:'codex'|'hermes-json'|'hermes-sqlite'|'normalized-export';path:string;instance:string}[]; from:string; to:string};
-export type LedgerItem={id:string;task:string;date:string;actor:'human'|'agent'|'thirdparty'|'unknown';instance:string;text:string;untrusted:true; eventId?:string;sourceId?:string;snapshotId?:string;contentRef?:string;locator?:string; type?:'intent'|'action'|'artifact'|'verifiedoutcome'|'unknown'; verification?:'unverified'|'verified'};
-export type Collection={report:Report;ledger:LedgerItem[];stats:{files:number;bytes:number;skipped:number;truncated:boolean};discovery?:Discovery;scope?:Scope;sources?:{tool:string;instance:string;authorization:'granted';read:'read'|'empty'|'failed';adapter:string;records:number}[];diagnostics?:{target:string;reason:string}[]};
+export type LedgerItem={id:string;task:string;date:string;actor:'human'|'agent'|'thirdparty'|'unknown';instance:string;text:string;untrusted:true; archiveRef?:string;eventId?:string;sourceId?:string;snapshotId?:string;contentRef?:string;locator?:string; type?:'intent'|'action'|'artifact'|'verifiedoutcome'|'unknown'; verification?:'unverified'|'verified'};
+export type Collection={fullEvidence?:import('./full.js').FullCoverage;report:Report;ledger:LedgerItem[];stats:{files:number;bytes:number;skipped:number;truncated:boolean};discovery?:Discovery;scope?:Scope;sources?:{tool:string;instance:string;authorization:'granted';read:'read'|'empty'|'failed';adapter:string;records:number}[];diagnostics?:{target:string;reason:string}[]};
 const MAX_FILE=1024*1024,MAX_TOTAL=8*1024*1024,MAX_FILES=200,MAX_ITEMS=500,MAX_TIME=20000;
 const denied=/(^|\/)(\.env[^/]*|\.git|node_modules|auth[^/]*|credentials?[^/]*|secrets?[^/]*|\.ssh|\.aws|\.config|Library|Cookies|Login Data|Keychains|keychain[^/]*|\.azure|\.kube|\.gnupg|\.npmrc|\.netrc|\.pypirc)(\/|$)/i;
 export function validateScope(x:unknown):Scope{

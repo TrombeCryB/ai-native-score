@@ -57,9 +57,9 @@ export function validatePublic(x:unknown):PublicScore {
 }
 export function validateReport(x:unknown):Report {
  if(!record(x)||!keys(x,['schemaVersion','scoringVersion','kind','ratings','evidence','summary','assessmentGate'])||x.schemaVersion!==1||x.scoringVersion!==VERSION||!['local-assessment','synthetic'].includes(String(x.kind)))throw Error('本地报告版本无效');
- if(!Array.isArray(x.evidence)||x.evidence.length>512)throw Error('证据无效');
+ if(!Array.isArray(x.evidence))throw Error('证据无效');
  const ids=new Set<string>();
- for(const e of x.evidence){if(!record(e)||!keys(e,['id','source','fact','strength'])||typeof e.id!=='string'||!/^e\d+$/.test(e.id)||ids.has(e.id)||typeof e.fact!=='string'||e.fact.length>160||!['project-structure','agent-structure','workflow-record'].includes(String(e.source))||!['structure','declaration','observation'].includes(String(e.strength)))throw Error('证据结构无效');ids.add(e.id);}
+ for(const e of x.evidence){if(!record(e)||!keys(e,['id','source','fact','strength'])||typeof e.id!=='string'||!/^[A-Za-z0-9][A-Za-z0-9._:@|/#=-]{0,255}$/.test(e.id)||ids.has(e.id)||typeof e.fact!=='string'||e.fact.length>160||!['project-structure','agent-structure','workflow-record'].includes(String(e.source))||!['structure','declaration','observation'].includes(String(e.strength)))throw Error('证据结构无效');ids.add(e.id);}
  if(!Array.isArray(x.ratings)||x.ratings.length!==6||x.ratings.some(a=>!Array.isArray(a)||a.length!==4))throw Error('指标结构无效');
  for(const a of x.ratings)for(const r of a){if(!record(r)||!keys(r,['value','confidence','evidence','basis'])||!['declared','observed','self-report','unknown'].includes(String(r.basis))||!Array.isArray(r.evidence)||!r.evidence.every(id=>typeof id==='string'&&ids.has(id))||typeof r.confidence!=='number')throw Error('指标证据无效');if(r.value!==null&&r.basis!=='self-report'&&!r.evidence.length)throw Error('已知指标必须有证据');if(r.value===null&&r.basis!=='unknown')throw Error('未知指标来源无效');}
  const summary=summarize(x.ratings as Rating[][]);
